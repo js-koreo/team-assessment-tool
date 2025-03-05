@@ -90,7 +90,7 @@ export default function TeamAssessmentTool() {
             <h3 className="text-lg font-semibold mb-2 text-gray-900">{domain}</h3>
             {questions[domain].map((q, index) => (
               <div key={index} className="mb-4">
-                <p className="mb-2 text-gray-800">{q}</p>
+                <p className="font-bold mb-2 text-gray-800">{q}</p>
                 <div className="flex gap-2 justify-center">
                   {Object.keys(trafficLightScores).map((emoji) => (
                     <label key={emoji} className="cursor-pointer flex items-center">
