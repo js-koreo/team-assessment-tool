@@ -48,11 +48,10 @@ const questions = {
 };
 
 const trafficLightScores = { "🟢": 5, "🟡": 3, "🔴": 1 };
-const trafficLightLabels = { "🟢": "Strength", "🟡": "Developing", "🔴": "Needs Growth" };
+const trafficLightLabels = { "🟢": "Always", "🟡": "Sometimes", "🔴": "Rarely" };
 
 export default function TeamAssessmentTool() {
   const [responses, setResponses] = useState({});
-  const [actionPlan, setActionPlan] = useState(null);
 
   const handleChange = (domain, index, value) => {
     const updatedResponses = { ...responses };
@@ -69,28 +68,6 @@ export default function TeamAssessmentTool() {
     });
   };
 
-  const generateActionPlan = () => {
-    const weakAreas = domains.filter((domain) => {
-      const scores = responses[domain] || [];
-      if (scores.length === 0) return true; // If no responses, consider it a weak area
-      const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
-      return avgScore <= 2; // Average score less than 3 is considered a weak area
-    });
-
-    if (weakAreas.length === 0) {
-      setActionPlan({
-        status: "strong",
-        message: "Your team is performing well across all domains. Focus on maintaining strengths and continuous improvement."
-      });
-    } else {
-      setActionPlan({
-        status: "areas-to-improve",
-        areas: weakAreas,
-        message: `Consider focusing on improving these areas: ${weakAreas.join(", ")}`
-      });
-    }
-  };
-
   return (
     <div className="p-6">
       <h2 className="text-xl font-bold mb-4">Team Self-Assessment Tool</h2>
@@ -100,7 +77,7 @@ export default function TeamAssessmentTool() {
             <h3 className="text-lg font-semibold mb-2 text-gray-900">{domain}</h3>
             {questions[domain].map((q, index) => (
               <div key={index} className="mb-4">
-                <p className="font-bold mb-2 text-gray-800">{q}</p>
+                <p className="mb-2 text-gray-800"><strong>{q}</strong></p>
                 <div className="flex gap-2 justify-center">
                   {Object.keys(trafficLightScores).map((emoji) => (
                     <label key={emoji} className="cursor-pointer flex items-center">
@@ -129,26 +106,6 @@ export default function TeamAssessmentTool() {
       <div className="mt-6 flex justify-center">
         <RadarChartComponent data={generateRadarData()} />
       </div>
-      <button 
-        className="mt-6 w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600"
-        onClick={generateActionPlan}
-      >
-        Generate Action Plan
-      </button>
-      
-      {actionPlan && (
-        <div className="mt-4 p-4 bg-gray-100 rounded">
-          <h3 className="font-bold text-lg mb-2 text-gray-900">Action Plan</h3>
-          <p className="text-gray-800">{actionPlan.message}</p>
-          {actionPlan.areas && (
-            <ul className="mt-2 list-disc pl-5">
-              {actionPlan.areas.map(area => (
-                <li key={area} className="text-gray-800">{area}: Focus on improving the team's capabilities in this domain.</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
     </div>
   );
 }

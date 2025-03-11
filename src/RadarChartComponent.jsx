@@ -4,9 +4,19 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from "r
 const RadarChartComponent = ({ data }) => {
   return (
     <div className="radar-chart">
-      <RadarChart outerRadius={120} width={400} height={300} data={data}>
+      <RadarChart 
+        outerRadius={140} 
+        width={490} 
+        height={450} 
+        data={data}
+        margin={{ top: 20, right: 50, left: 50, bottom: 20 }}
+      >
         <PolarGrid />
-        <PolarAngleAxis dataKey="domain" />
+        <PolarAngleAxis 
+          dataKey="domain" 
+          tick={{ fontSize: 12 }}
+          tickLine={false}
+        />
         <PolarRadiusAxis angle={30} domain={[1, 5]} />
         <Radar 
           name="Team Assessment" 
