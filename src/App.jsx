@@ -11,29 +11,39 @@ const domains = [
 
 const questions = {
   "Strategic Focus": [
-    "Do we set clear priorities aligned with our mission?",
-    "Do we make bold, strategic decisions when needed?",
-    "Do we delegate effectively and hold each other accountable?"
+    "Do I/we focus on organisational mission and strategy, setting clear priorities, and say no to distractions?",
+    "Do I/we make tough, strategic decisions with courage and confidence?",
+    "Do I/we balance financial growth with strategic goals when making decisions?",
+    "Am I/Are we bold and ambitious in driving results to achieve our strategy?",
+    "Do I/we empower colleagues to perform at their best while holding them accountable?"
   ],
   "Change Maker": [
-    "Do we embrace change as a pathway to impact?",
-    "Do we make informed decisions about resources and growth?",
-    "Do we optimize systems for effective leadership?"
+    "Do I/we embrace change as a constant and inspire others to be more resilient in times of change?",
+    "Do I/we align our work with achieving positive change in the wider ecosystem we work in?",
+    "Do I/we make sound decisions to resource our work in innovative ways?",
+    "Do I/we see our organisational teams and partners as a system and influence change within it?",
+    "Do I/we optimise processes to support effective leadership and change-making?"
   ],
   "Inclusive": [
-    "Do we prioritize diverse perspectives in decision-making?",
-    "Do we foster an inclusive and psychologically safe environment?",
-    "Do we role model authenticity and integrity in leadership?"
+    "Do I/we lead with empathy, centring the needs of those we work for?",
+    "Do I/we build diverse, inclusive teams where everyone feels valued?",
+    "Do I/we actively seek and include diverse perspectives when making decisions?",
+    "Am I/Are we authentic, transparent, and reliable in my/our actions?",
+    "Do I/we address power dynamics and inequalities proactively?"
   ],
   "Collaborative": [
-    "Do we build strong networks to enhance impact?",
-    "Do we actively listen and integrate diverse perspectives?",
-    "Do we foster a feedback culture that drives improvement?"
+    "Do I/we build trust-based connections that mobilises partnerships and innovation?",
+    "Do I/we communicate stories that motivate others while centring the people we work for?",
+    "Do I/we actively listen to and integrate diverse perspectives?",
+    "Do I/we create a culture of feedback and transparency?",
+    "Do I/we seek opportunities to improve collaboration and communication?"
   ],
   "Entrepreneurial": [
-    "Do we experiment with new ideas and innovate?",
-    "Do we take smart risks with data-driven decision-making?",
-    "Do we balance short-term priorities with long-term learning?"
+    "Am I/Are we curious and open to new ideas that could drive positive growth?",
+    "Do I/we make bold, data-driven decisions that balance risk and reward?",
+    "Do I/we foster a culture of learning, encouraging reflection and growth from failure?",
+    "Am I/Are we adaptable, embracing uncertainty as part of the innovation process?",
+    "Do I/we create environments that support personal growth and well-being for colleagues?"
   ]
 };
 
