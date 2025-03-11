@@ -1,12 +1,72 @@
-# React + Vite
+# Team Self-Assessment Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that allows teams to assess their performance across five key domains: Strategic Focus, Change Maker, Inclusive, Collaborative, and Entrepreneurial.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This tool enables teams to evaluate their capabilities through a series of questions in each domain. Team members can rate their performance using a traffic light system (Strength, Developing, Needs Growth), and results are visualized in a radar chart.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Domain-based Assessment**: Structured evaluation across five key domains
+- **Traffic Light Rating System**: Simple 3-level scoring (Strength, Developing, Needs Growth)
+- **Real-time Visualization**: Dynamic radar chart updates as ratings are entered
+- **Responsive Design**: Works on desktop and mobile devices
+
+## Technical Stack
+
+- React
+- Recharts for data visualization
+- Tailwind CSS for styling
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/team-assessment-tool.git
+cd team-assessment-tool
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Usage
+
+1. For each question in each domain, select the appropriate rating:
+   - 🟢 Strength (5 points)
+   - 🟡 Developing (3 points)
+   - 🔴 Needs Growth (1 point)
+
+2. As you complete the assessment, the radar chart automatically updates to show the team's average score in each domain.
+
+## Project Structure
+
+- `App.jsx` - Main application component
+- `RadarChartComponent.jsx` - Visualization component for the radar chart
+- `TrafficLightAssessment.jsx` - Component for rendering the traffic light indicators
+- `index.css` - Global styles
+- `main.jsx` - Application entry point
+
+## Customization
+
+To modify the assessment domains or questions, edit the `domains` and `questions` objects in `App.jsx`.
